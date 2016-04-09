@@ -1,0 +1,25 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+        "eqeqeq": 2,
+        "indent": 0,
+        "quotes": [1,"single"],
+        "semi": [2,"always"],
+        "no-console": 0
+    },
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    "extends": "eslint:recommended",
+    "globals" : {
+        "require": true,
+        "module": true
+    },
+    "ecmaFeatures": {
+        "modules": true
+    }
+}
