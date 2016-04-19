@@ -8,9 +8,19 @@ export default {
             path: resolve(`${paths.dist}/`),
             filename: `${appName}.js`
         },
+        externals :{
+            'glob' : 'glob',
+            'lodash' : '_',
+            'underscore.string' : '_str',
+            'path':'path',
+            'callsite': 'callsite'
+        },
         colors: true,
         progress: true,
         module: {
+            exprContextRegExp: /$^/,
+            exprContextCritical: false,
+
             loaders: [{
                 test: /\.js/,
                 exclude: /(node_modules)/,
@@ -21,7 +31,6 @@ export default {
                 }
             }]
         },
-        devtool: 'source-map',
         plugins: []
     }
 };

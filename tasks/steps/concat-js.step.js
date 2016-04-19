@@ -5,7 +5,7 @@ import notify from 'gulp-notify';
 import chalk from 'chalk';
 import process from 'process';
 
-export default webpackConf => cb => {
+export default ({webpackConf}) => cb => {
 
     console.log(chalk.yellow(`Concatenating JS files ${webpackConf.entry} to ${webpackConf.output.path}`));
 
@@ -20,7 +20,7 @@ export default webpackConf => cb => {
         process.exit();
     };
 
-    return gulp.src(webpackConf.entry, {sourcemaps:true})
+    return gulp.src(webpackConf.entry)
         .pipe(plumber({errorHandler: onError}))
         .pipe(webpack(webpackConf))
         .pipe(gulp.dest(`${webpackConf.output.path}`));

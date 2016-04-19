@@ -7,7 +7,8 @@ require('./clean.task');
 gulp.task('build',
     gulp.series(
         'clean',
-        'concatJs',
+        'concatJs:dev',
+        'concatJs:prod',
         notifyStep({ taskName:'build' })
     )
 );
