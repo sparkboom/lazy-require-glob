@@ -1,6 +1,6 @@
 {
   "name": "lazy-require-glob",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use a glob to get an object that contains matching modules. These modules by default are not 'required' unless they are accessed.",
   "main": "dist/lazy-require-glob.js",
   "scripts": {
